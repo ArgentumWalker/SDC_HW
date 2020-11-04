@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+    <node pkg="homework1" name="task3" type="task3.py">
+        <remap to="turtle1/cmd_vel" from="leo/cmd_vel"/>
+        <remap to="turtle1/pose" from="leo/pose"/>
+        <remap to="turtle2/cmd_vel" from="raf/cmd_vel"/>
+        <remap to="turtle2/pose" from="raf/pose"/>
+    </node>
+</launch>
